@@ -1,35 +1,39 @@
+'use client';
 import './globals.css';
-import LightDarkSwitch from './components/LightDarkSwitch/LightDarkSwitch';
+import Header from './components/Header/Header';
 import Start from './components/Start/Start';
+import Quiz from './components/Quiz/Quiz';
+import quizData from '@data/data.json';
+import { useState } from 'react';
 
 function App() {
+  const iconBackgroundColor = [
+    'bg-orange-50',
+    'bg-green-100',
+    'bg-blue-50',
+    'bg-purple-100',
+  ];
+  const [selectedQuiz, selectQuiz] = useState(4);
+  const quizInfo = quizData.quizzes[selectedQuiz]
+    ? {
+        title: quizData.quizzes[selectedQuiz].title,
+        icon: quizData.quizzes[selectedQuiz].icon,
+        index: selectedQuiz,
+      }
+    : null;
   return (
-    <div className="dark:bg-gray-500">
-      <div className="dark:bg-gray-500 min-h-screen max-w-5xl m-auto">
-        <LightDarkSwitch />
-        <div className="flex border-2 border-black flex-col lg:flex-row">
-          {/* <!-- Quiz menu start --> */}
-          <div className="border-2 border-black">
-            <h1 className="text-6xl">
-              Welcome to the <b>Frontend Quiz!</b>
-            </h1>
-            <p>
-              <i>Pick a subject to get started.</i>
-            </p>
-          </div>
-          <Start />
-          {/* <!-- Quiz menu end --> */}
-          {/* <!-- Quiz question start --> */}
-          {/* <p>Question 1 <!-- number --> of 10</p> */}
-          {/* A B C D */}
-          {/* <p>Submit answer</p> */}
-          {/* <!-- Quiz question end --> */}
-          {/* <!-- Quiz completed start --> */}
-          {/* <p>Quiz completed </p> */}
-          {/* You scored... */}
-          {/* <!-- score --> out of 10 */}
-          {/* <!-- Quiz completed end --> */}
-        </div>
+    <div className="dark:bg-blue-900 bg-grey-50 lg:dark:bg-[url('/assets/images/pattern-background-desktop-dark.svg')] lg:bg-[url('/assets/images/pattern-background-desktop-light.svg')] md:dark:bg-[url('/assets/images/pattern-background-tablet-dark.svg')] dark:bg-[url('/assets/images/pattern-background-mobile-dark.svg')] md:bg-[url('/assets/images/pattern-background-tablet-light.svg')] bg-[url('/assets/images/pattern-background-mobile-light.svg')] bg-no-repeat">
+      <div className="min-h-screen items-center max-w-6xl m-auto">
+        <Header quizInfo={quizInfo} selectedQuiz={selectedQuiz} />
+        {selectedQuiz === 4 ? (
+          <Start selectQuiz={selectQuiz} />
+        ) : (
+          <Quiz
+            iconBackgroundColor={iconBackgroundColor[selectedQuiz]}
+            selectQuiz={selectQuiz}
+            selectedQuiz={selectedQuiz}
+          />
+        )}
       </div>
     </div>
   );

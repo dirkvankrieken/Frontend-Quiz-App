@@ -8,7 +8,6 @@ const LightDarkSwitch = () => {
   const { theme, setTheme } = useTheme();
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Sync the switch state with the current theme
   useEffect(() => {
     setIsDarkMode(theme === 'dark');
   }, [theme]);
@@ -18,13 +17,39 @@ const LightDarkSwitch = () => {
     setIsDarkMode(!isDarkMode);
   };
 
-  return (
-    <div className="flex items-center justify-end">
-      <img src="./assets/images/icon-sun-dark.svg" alt="sun icon" />
-      <Switch checked={isDarkMode} onCheckedChange={handleToggle} />
-      <img src="./assets/images/icon-moon-dark.svg" alt="moon icon" />
-    </div>
-  );
+  if (isDarkMode) {
+    return (
+      <div className="flex items-center justify-end">
+        <img
+          src="./assets/images/icon-sun-light.svg"
+          className="mr-5"
+          alt="sun icon"
+        />
+        <Switch checked={isDarkMode} onCheckedChange={handleToggle} />
+        <img
+          className="ml-5"
+          src="./assets/images/icon-moon-light.svg"
+          alt="moon icon"
+        />
+      </div>
+    );
+  } else {
+    return (
+      <div className="flex items-center justify-end">
+        <img
+          src="./assets/images/icon-sun-dark.svg"
+          className="mr-5"
+          alt="sun icon"
+        />
+        <Switch checked={isDarkMode} onCheckedChange={handleToggle} />
+        <img
+          className="ml-5"
+          src="./assets/images/icon-moon-dark.svg"
+          alt="moon icon"
+        />
+      </div>
+    );
+  }
 };
 
 export default LightDarkSwitch;
