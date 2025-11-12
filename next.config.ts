@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // <=== enables static exports
+  basePath: '/Frontend-Quiz-App',
+  output: 'export',
   reactStrictMode: true,
 };
 
