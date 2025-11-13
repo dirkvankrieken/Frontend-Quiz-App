@@ -17,7 +17,7 @@ const iconBackgroundColor = [
 ];
 const Header = ({ quizInfo, selectedQuiz }: headerProps) => {
   return (
-    <div className="flex justify-between lg:py-20 py-5 px-10">
+    <div className="flex justify-between lg:py-20 p-5">
       <QuizInfo
         iconBackgroundColor={iconBackgroundColor[selectedQuiz]}
         quizData={quizInfo}
