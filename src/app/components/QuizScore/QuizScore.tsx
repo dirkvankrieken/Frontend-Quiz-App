@@ -17,7 +17,7 @@ const QuizScore = ({
   icon,
 }: quizScoreProps) => {
   return (
-    <div className="flex flex-col lg:flex-row px-10 lg:gap-0 gap-10">
+    <div className="flex flex-col lg:flex-row px-5 lg:gap-0 gap-10">
       <div className="flex-1 font-light lg:text-6xl text-4xl">
         Quiz completed <br />
         <span className="font-medium">You scored...</span>
@@ -41,7 +41,7 @@ const QuizScore = ({
         </div>
         <button
           onClick={() => selectQuiz(4)}
-          className={`text-white lg:text-2xl text-xl bg-purple-600 w-full lg:py-6 py-4 lg:rounded-2xl rounded-xl`}
+          className={`hover:cursor-pointer text-white lg:text-2xl text-xl bg-purple-600 w-full lg:py-6 py-4 lg:rounded-2xl rounded-xl`}
         >
           Play Again
         </button>

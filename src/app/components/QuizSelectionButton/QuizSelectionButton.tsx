@@ -14,7 +14,7 @@ const quizSelectionButton = ({
   return (
     <button
       onClick={onClick}
-      className="dark:text-white dark:bg-blue-850 flex items-center bg-white w-full px-5 py-3 rounded-xl gap-5"
+      className="hover:cursor-pointer dark:text-white dark:bg-blue-850 flex items-center bg-white w-full px-5 py-3 rounded-xl gap-5"
     >
       <div className="bg-white rounded-lg p-2">
         <Image src={icon} width={50} height={50} alt="" />
