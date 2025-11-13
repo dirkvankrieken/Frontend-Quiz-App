@@ -24,7 +24,7 @@ const Quiz = ({ iconBackgroundColor, selectedQuiz, selectQuiz }: quizProps) => {
       setSelected(selected.map((x, i) => (i == index ? true : false)));
       setShowWarning(false);
     }
-    setSubmitButtonColor('bg-purple-600');
+    setSubmitButtonColor('hover:bg-[#D394FA] bg-purple-600');
   }
   function checkAnswer(newCorrectAnswer: number) {
     if (newCorrectAnswer == selected.indexOf(true)) {
@@ -72,7 +72,7 @@ const Quiz = ({ iconBackgroundColor, selectedQuiz, selectQuiz }: quizProps) => {
     );
   }
   return (
-    <div className="lg:flex-row lg:gap-25 flex flex-col gap-10 p-10">
+    <div className="lg:flex-row lg:gap-25 flex flex-col gap-10 p-5">
       <div className="flex-1">
         <span className="italic text-blue-300">
           Question {question + 1} of{' '}
@@ -104,7 +104,7 @@ const Quiz = ({ iconBackgroundColor, selectedQuiz, selectQuiz }: quizProps) => {
         )}
         <button
           onClick={submitClicked}
-          className={`text-white ${submitButtonColor} px-5 py-3 rounded-xl`}
+          className={`hover:cursor-pointer lg:text-xl text-white ${submitButtonColor} lg:py-5 py-3 rounded-xl`}
         >
           {!submitted ? 'Submit answer' : 'Next Question'}
         </button>
@@ -115,20 +115,3 @@ const Quiz = ({ iconBackgroundColor, selectedQuiz, selectQuiz }: quizProps) => {
 };
 
 export default Quiz;
-
-//   useEffect(() => {
-//     function handleKeyDown(event: KeyboardEvent) {
-//       const key = event.key.toUpperCase();
-//       const optionIndex = ['A', 'B', 'C', 'D'].indexOf(key);
-//       if (optionIndex !== -1) {
-//         selectOption(optionIndex);
-//       }
-//       if (key === 'ENTER' || key === ' ') {
-//         submitClicked();
-//       }
-//     }
-//     window.addEventListener('keydown', handleKeyDown);
-//     return () => {
-//       window.removeEventListener('keydown', handleKeyDown);
-//     };
-//   }, [submitted, selected, question]);
