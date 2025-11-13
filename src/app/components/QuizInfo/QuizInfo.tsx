@@ -20,7 +20,7 @@ const QuizInfo = ({ iconBackgroundColor, quizData }: quizInfoProps) => {
           height={50}
           alt=""
         />
-        <div className="text-3xl">{quizData.title}</div>
+        <div className="lg:text-3xl text-xl">{quizData.title}</div>
       </header>
     );
   } else {
