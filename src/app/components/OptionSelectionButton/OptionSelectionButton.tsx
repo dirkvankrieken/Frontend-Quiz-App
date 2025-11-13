@@ -28,6 +28,9 @@ const OptionSelectionButton = ({
     buttonBorder = 'border-green-500';
   } else if (submitted && selected) {
     buttonBorder = 'border-red-500';
+  } else if (!submitted) {
+    buttonBorder =
+      'hover:cursor-pointer hover:!border-purple-600 dark:border-blue-850 border-white';
   } else {
     buttonBorder = 'dark:border-blue-850 border-white';
   }
@@ -37,7 +40,7 @@ const OptionSelectionButton = ({
       className={`${buttonBorder} dark:text-white dark:bg-blue-850 bg-white flex justify-between items-center w-full px-5 py-3 rounded-xl border-2 text-left`}
     >
       <div className="flex gap-5 items-center">
-        <div className="bg-white text-center text-black rounded-lg w-10 h-10 p-2">
+        <div className="bg-gray-50 text-gray-500 text-center rounded-lg w-10 h-10 p-2">
           {optionLetters[number]}
         </div>
         {text}
