@@ -1,3 +1,0 @@
-image: node:22
-command: npm install && npx next build && npx next export
-public: out
