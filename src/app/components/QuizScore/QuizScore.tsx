@@ -17,7 +17,7 @@ const QuizScore = ({
   icon,
 }: quizScoreProps) => {
   return (
-    <div className="flex flex-col lg:flex-row px-5 lg:gap-0 gap-10">
+    <main className="flex flex-col lg:flex-row px-5 lg:gap-0 gap-10">
       <div className="flex-1 font-light lg:text-6xl text-4xl">
         Quiz completed <br />
         <span className="font-medium">You scored...</span>
@@ -46,7 +46,7 @@ const QuizScore = ({
           Play Again
         </button>
       </div>
-    </div>
+    </main>
   );
 };
 

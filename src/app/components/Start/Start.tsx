@@ -13,7 +13,7 @@ const iconBackgroundColor = [
 ];
 const Start = ({ selectQuiz }: StartProps) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-10 p-5">
+    <main className="flex flex-col lg:flex-row gap-10 p-5">
       <div className="flex-1">
         <h1 className="dark:text-white text-blue-900 text-5xl font-light mb-7">
           Welcome to the <span className="font-medium">Frontend Quiz!</span>
@@ -33,7 +33,7 @@ const Start = ({ selectQuiz }: StartProps) => {
           />
         ))}
       </div>
-    </div>
+    </main>
   );
 };
 

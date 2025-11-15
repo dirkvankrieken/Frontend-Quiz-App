@@ -72,7 +72,7 @@ const Quiz = ({ iconBackgroundColor, selectedQuiz, selectQuiz }: quizProps) => {
     );
   }
   return (
-    <div className="lg:flex-row lg:gap-25 flex flex-col gap-10 p-5">
+    <main className="lg:flex-row lg:gap-25 flex flex-col gap-10 p-5">
       <div className="flex-1">
         <span className="italic text-blue-300">
           Question {question + 1} of{' '}
@@ -110,7 +110,7 @@ const Quiz = ({ iconBackgroundColor, selectedQuiz, selectQuiz }: quizProps) => {
         </button>
         {showWarning && <NothingSelected />}
       </div>
-    </div>
+    </main>
   );
 };
 
