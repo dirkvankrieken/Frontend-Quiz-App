@@ -16,6 +16,7 @@ const QuizInfo = ({ iconBackgroundColor, quizData }: quizInfoProps) => {
         <Image
           className={`${iconBackgroundColor} rounded-lg p-2`}
           src={quizData.icon}
+          sizes="(min-width: 64rem) 20px, 50px"
           width={50}
           height={50}
           alt=""
