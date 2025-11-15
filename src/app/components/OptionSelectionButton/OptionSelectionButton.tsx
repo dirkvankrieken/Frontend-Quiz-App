@@ -23,21 +23,21 @@ const OptionSelectionButton = ({
   const optionLetters = ['A', 'B', 'C', 'D'];
   let buttonBorder;
   if (selected && !submitted) {
-    buttonBorder = 'border-purple-500';
+    buttonBorder = '!border-purple-500';
   } else if (submitted && selected && correct) {
     buttonBorder = 'border-green-500';
   } else if (submitted && selected) {
     buttonBorder = 'border-red-500';
   } else if (!submitted) {
     buttonBorder =
-      'hover:cursor-pointer hover:!border-purple-600 dark:border-blue-850 border-white';
+      'hover:cursor-pointer hover:dark:!bg-blue-950 hover:dark:!border-blue-950 hover:bg-gray-50 hover:border-gray-50';
   } else {
     buttonBorder = 'dark:border-blue-850 border-white';
   }
   return (
     <button
       onClick={onClick}
-      className={`${buttonBorder} dark:text-white dark:bg-blue-850 bg-white flex justify-between items-center w-full px-5 py-3 rounded-xl border-2 text-left`}
+      className={`${buttonBorder} dark:text-white dark:bg-blue-850 dark:border-blue-850 bg-white border-white flex justify-between items-center w-full px-5 py-3 rounded-xl border-2 text-left`}
     >
       <div className="flex gap-5 items-center">
         <div className="bg-gray-50 text-gray-500 text-center rounded-lg w-10 h-10 p-2">
