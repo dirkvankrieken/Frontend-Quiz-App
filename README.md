@@ -12,8 +12,9 @@ The app is built with React and for the styling of the app TailwindCSS is used.
 # What I have learned?
 
 - How to use [Next.js](https://nextjs.org), a React Framework, for my project.
+- How to deploy a Next.JS app to Cloudflare Workers using the @opennextjs/cloudflare adapter
 - How to use an UI component from a UI component library, in this case [shadcn](https://ui.shadcn.com/).
-- How to implement Dark/light theme and toggle in Next.js and code the whole website to react to the chosen theme using TailwindCSS.
+- How to implement Dark/light theme and toggle in Next.js and code the whole website to adjust to the chosen theme using TailwindCSS.
 - How to organize my project files and folders effectively, including:
   - Separating components, styles, and data into their respective directories.
   - Using aliases (e.g., @/) for cleaner imports.
