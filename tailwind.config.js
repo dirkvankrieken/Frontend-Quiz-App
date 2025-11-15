@@ -8,4 +8,5 @@ module.exports = {
   plugins: [
     require('tailwindcss-animate'), // Ensure this line is included
   ],
+  darkMode: 'selector',
 };
