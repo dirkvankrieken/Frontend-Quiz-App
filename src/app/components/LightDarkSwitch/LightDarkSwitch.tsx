@@ -2,7 +2,6 @@
 
 import { Switch } from '@/app/components/ui/switch';
 import Image from 'next/image';
-import { ThemeProvider } from 'next-themes';
 import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 
