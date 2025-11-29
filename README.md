@@ -7,8 +7,7 @@ The app is built with React and for the styling of the app TailwindCSS is used.
 # Author
 
 - [github.com/dirkvankrieken](https://github.com/dirkvankrieken)
-- [dirkvankrieken.com](https://dirkvankrieken.com)
-
+  
 # What I have learned?
 
 - How to use [Next.js](https://nextjs.org), a React Framework, for my project.
